@@ -1,20 +1,20 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react'; // Removed unused React import
 import axios from 'axios';
-import { GridColDef, Container, Typography } from '@mui/material';
-import { DataGrid } from '@mui/x-data-grid'; // Use '@mui/x-data-grid' for DataGrid
+import { Container, Typography } from '@mui/material';
+import { DataGrid, GridColDef } from '@mui/x-data-grid'; // Corrected import for GridColDef
 
 import DepartmentList from '../components/DepartmentList';
-import '../styles/SecondPage.css'; // Import custom CSS file for styling
 
 const SecondPage = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    axios.get('https://jsonplaceholder.typicode.com/posts')
-      .then(response => {
+    axios
+      .get('https://jsonplaceholder.typicode.com/posts')
+      .then((response) => {
         setData(response.data);
       })
-      .catch(error => {
+      .catch((error) => {
         console.error('There was an error fetching the data!', error);
       });
   }, []);

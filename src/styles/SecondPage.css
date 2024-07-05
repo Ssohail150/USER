@@ -1,0 +1,20 @@
+.container {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 80%;
+    max-width: 1200px;
+  }
+  
+  .data-grid {
+    margin-top: 20px;
+  }
+  
+  .department-list {
+    margin-top: 20px;
+  }
+  
+ 
+  
